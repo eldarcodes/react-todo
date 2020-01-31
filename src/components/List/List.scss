@@ -1,0 +1,67 @@
+.list {
+  $self: &;
+
+  margin-bottom: 30px;
+
+  user-select: none;
+  &__add-button {
+    svg,
+    span {
+      opacity: 0.4;
+    }
+    &:hover {
+      svg,
+      span {
+        opacity: 1;
+        cursor: pointer;
+      }
+    }
+  }
+
+  span {
+    flex: 1;
+  }
+
+  li {
+    display: flex;
+    align-items: center;
+    padding: 10px 12px;
+
+    &:hover #{$self}__remove-icon {
+      opacity: 0.2;
+    }
+
+    #{$self}__remove-icon {
+      cursor: pointer;
+      opacity: 0;
+      &:hover {
+        opacity: 0.8;
+      }
+    }
+
+    &:hover {
+      background: rgba(255, 255, 255, 0.5);
+    }
+    &.active {
+      background: #fff;
+      box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.05);
+      border-radius: 4px;
+      cursor: pointer;
+    }
+
+    .badge {
+      position: relative;
+      left: 5px;
+    }
+    i {
+      display: inline-flex;
+      margin-right: 8px;
+      svg {
+        path {
+          fill: #7c7c7c;
+        }
+      }
+    }
+  }
+  
+}
