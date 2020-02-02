@@ -25,12 +25,55 @@
     }
   }
 
+  &__form {
+    margin-top: 10px;
+
+    &-block {
+      .button {
+        margin-right: 10px;
+        margin-top: 15px; 
+      }
+    }
+
+    &-new {
+      display: flex;
+      align-items: center;
+      cursor: pointer;
+      opacity: 0.4;
+
+      &:hover{
+        opacity: 0.8;
+      }
+
+      img {
+        width: 15px;
+        height: 15px;
+        margin-left: 5px;
+      }
+
+      span {
+        font-size: 16px;
+        margin-left: 20px;
+      }
+    }
+  }
+
   &__items {
     margin-top: 30px;
+    h2 {
+      font-family: Montserrat;
+      font-weight: bold;
+      font-size: 20px;
+      color: #c9d1d3;
+      position: absolute;
+      left: 50%;
+      top: 50%;
+    }
 
     &-row {
       display: flex;
       align-items: center;
+      margin-bottom: 15px;
 
       input {
         margin-left: 15px;
