@@ -1,7 +1,12 @@
 .tasks {
   &:not(:last-of-type) {
-    margin-bottom: 30px;
+    margin-bottom: 40px;
   }
+
+  a {
+    text-decoration: none;
+  }
+
   &__title {
     font-family: Montserrat;
     font-weight: bold;
@@ -29,7 +34,7 @@
   }
 
   &__form {
-    margin-top: 10px;
+    margin-top: 20px;
 
     &-block {
       .button {
@@ -43,30 +48,32 @@
       align-items: center;
       cursor: pointer;
       opacity: 0.4;
+      transition: opacity 0.15s ease-in-out;
 
       &:hover {
         opacity: 0.8;
       }
 
       img {
-        width: 15px;
-        height: 15px;
-        margin-left: 5px;
+        width: 16px;
+        height: 16px;
+        margin-left: 4px;
       }
 
       span {
         font-size: 16px;
-        margin-left: 20px;
+        margin-left: 19px;
       }
     }
   }
 
   &__items {
     margin-top: 30px;
+
     h2 {
       font-family: Montserrat;
       font-weight: bold;
-      font-size: 20px;
+      font-size: 22px;
       color: #c9d1d3;
       position: absolute;
       left: 50%;
@@ -78,7 +85,42 @@
       align-items: center;
       margin-bottom: 15px;
 
-      input {
+      &:hover &-actions {
+        opacity: 1;
+      }
+
+      &-actions {
+        display: flex;
+        opacity: 0;
+        transition: opacity 0.15s ease-in-out;
+
+        div {
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          width: 32px;
+          height: 32px;
+          background-color: lighten(#f4f6f8, 2%);
+          border-radius: 6px;
+          margin-left: 5px;
+          cursor: pointer;
+
+          &:hover {
+            background-color: darken(#f4f6f8, 2%);
+            svg {
+              opacity: 0.9;
+            }
+          }
+
+          svg {
+            width: 11px;
+            height: 11px;
+            opacity: 0.4;
+          }
+        }
+      }
+
+      p {
         margin-left: 15px;
         border: 0;
         font-size: 16px;

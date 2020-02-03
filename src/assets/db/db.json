@@ -24,38 +24,30 @@
       "name": "Спорт",
       "colorId": 3,
       "id": 6
+    },
+    {
+      "name": "Фронтенд",
+      "colorId": 3,
+      "id": 7
+    },
+    {
+      "name": "123",
+      "colorId": 5,
+      "id": 8
     }
   ],
   "tasks": [
     {
-      "id": 1,
-      "listId": 2,
-      "text": "Изучить JavaScript",
-      "completed": true
-    },
-    {
-      "id": 2,
-      "listId": 2,
-      "text": "Изучить паттерны проектирования",
-      "completed": false
-    },
-    {
-      "id": 3,
-      "listId": 2,
-      "text": "ReactJS Hooks (useState, useReducer, useEffect и т.д.)",
-      "completed": true
-    },
-    {
-      "id": 4,
-      "listId": 2,
-      "text": "Redux (redux-observable, redux-saga)",
-      "completed": false
-    },
-    {
       "listId": 2,
       "text": "123",
+      "completed": true,
+      "id": 23
+    },
+    {
+      "listId": 2,
+      "text": "33",
       "completed": false,
-      "id": 11
+      "id": 25
     }
   ],
   "colors": [

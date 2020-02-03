@@ -1,6 +1,6 @@
 import React from "react";
 import classNames from "classnames";
-import axios from "axios";
+import axios from "axios";  
 
 import Badge from "../Badge/Badge";
 

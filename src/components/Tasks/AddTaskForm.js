@@ -24,12 +24,11 @@ const AddTaskForm = ({list, onAddTask}) => {
       axios
         .post("http://localhost:3001/tasks", obj)
         .then(({data}) => {
-          console.log(data);
           onAddTask(list.id, data);
           toggleFormVisible();
         })
         .catch(() => alert("Ошибка при добавлении задачи"))
-        .finally(() => setIsLoading(true));
+        .finally(() => setIsLoading(false));
     } else {
       alert("Введите название списка!");
     }
