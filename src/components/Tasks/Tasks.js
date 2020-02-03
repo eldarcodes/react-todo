@@ -6,7 +6,7 @@ import AddTaskForm from "./AddTaskForm";
 
 import "./Tasks.scss";
 
-const Tasks = ({list, onEditTitle, onAddTask}) => {
+const Tasks = ({list, onEditTitle, onAddTask, withoutEmpty}) => {
   const editTitle = () => {
     const newTitle = window.prompt("Название списка ", list.name);
     if (newTitle) {
@@ -21,12 +21,12 @@ const Tasks = ({list, onEditTitle, onAddTask}) => {
 
   return (
     <div className="tasks">
-      <h2 className="tasks__title">
+      <h2 style={{color: list.color.hex}} className="tasks__title">
         {list.name} <img onClick={editTitle} src={editSVG} alt="Edit icon" />
       </h2>
 
       <div className="tasks__items">
-        {!list.tasks.length && <h2>Задачи отсутствуют</h2>}
+        {!withoutEmpty && !list.tasks.length && <h2>Задачи отсутствуют</h2>}
         {list.tasks.map(task => (
           <div key={task.id} className="tasks__items-row">
             <div className="checkbox">

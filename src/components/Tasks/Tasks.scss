@@ -1,4 +1,7 @@
 .tasks {
+  &:not(:last-of-type) {
+    margin-bottom: 30px;
+  }
   &__title {
     font-family: Montserrat;
     font-weight: bold;
@@ -31,7 +34,7 @@
     &-block {
       .button {
         margin-right: 10px;
-        margin-top: 15px; 
+        margin-top: 15px;
       }
     }
 
@@ -41,7 +44,7 @@
       cursor: pointer;
       opacity: 0.4;
 
-      &:hover{
+      &:hover {
         opacity: 0.8;
       }
 
